@@ -20,18 +20,11 @@
   <script>
     var today = new Date();
     var month = (today.getMonth()+1);
-    console.log("The month is " + month);
-    if (month == 12) {
-      var day = today.getDate();
-      console.log("The day is " + day);
-      if (day == 25) {
-        document.getElementById("answer").innerHTML = "Yep";
-      } else {
-        // It could be December but not the 25th
-        document.getElementById("answer").innerHTML = "Nope";
-      }
+    var day = today.getDate();
+    console.log("The month is " + month + " and the day is " + day);
+    if (month == 12 && day == 25) {
+      document.getElementById("answer").innerHTML = "Yep";
     } else {
-      // If it's not December, definitely not
       document.getElementById("answer").innerHTML = "Nope";
     }
   </script>
